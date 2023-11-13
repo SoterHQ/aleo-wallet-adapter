@@ -1,5 +1,5 @@
 {
-  "name": "@aleo123/aleo-wallet-adapter-base",
+  "name": "@soterhq/aleo-wallet-adapter-base",
   "version": "0.0.1",
   "description": "Core infrastructure for connecting aleo-compatible wallets to your dApp.",
   "module": "dist/index.js",
@@ -7,11 +7,7 @@
   "scripts": {
     "build": "tsc"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aleoweb123/aleo-wallet-adapter.git"
-  },
-  "author": "aleoweb123",
+  "author": "soterhq",
   "license": "MIT",
   "dependencies": {
     "eventemitter3": "^4.0.7"
@@ -20,11 +16,15 @@
     "typescript": "^4.8.4"
   },
   "private": false,
-  "bugs": {
-    "url": "https://github.com/aleoweb123/aleo-wallet-adapter/issues"
-  },
-  "homepage": "https://github.com/aleoweb123/aleo-wallet-adapter#readme",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SoterHQ/aleo-wallet-adapter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SoterHQ/aleo-wallet-adapter/issues"
+  },
+  "homepage": "https://github.com/SoterHQ/aleo-wallet-adapter#readme",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"

@@ -8,7 +8,7 @@ import {
   WalletAdapterNetwork,
   WalletName,
   WalletReadyState
-} from '@aleo123/aleo-wallet-adapter-base';
+} from '@soterhq/aleo-wallet-adapter-base';
 
 export interface Wallet {
   adapter: Adapter;

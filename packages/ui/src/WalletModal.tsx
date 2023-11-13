@@ -1,8 +1,8 @@
 import type { FC, MouseEvent } from 'react';
 import React, { useCallback, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { WalletName, WalletReadyState } from '@aleo123/aleo-wallet-adapter-base';
-import { useWallet, Wallet } from '@aleo123/aleo-wallet-adapter-react';
+import { WalletName, WalletReadyState } from '@soterhq/aleo-wallet-adapter-base';
+import { useWallet, Wallet } from '@soterhq/aleo-wallet-adapter-react';
 import { Collapse } from './Collapse';
 import { useWalletModal } from './useWalletModal';
 import { WalletListItem } from './WalletListItem';

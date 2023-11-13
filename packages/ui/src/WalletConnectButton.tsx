@@ -1,10 +1,10 @@
 import type { FC, MouseEventHandler } from 'react';
 import React, { useCallback, useMemo } from 'react';
-import { useWallet } from '@aleo123/aleo-wallet-adapter-react';
+import { useWallet } from '@soterhq/aleo-wallet-adapter-react';
 import type { ButtonProps } from './Button';
 import { Button } from './Button';
 import { WalletIcon } from './WalletIcon';
-import { WalletAdapterNetwork } from '@aleo123/aleo-wallet-adapter-base';
+import { WalletAdapterNetwork } from '@soterhq/aleo-wallet-adapter-base';
 
 export const WalletConnectButton: FC<ButtonProps> = ({ children, disabled, onClick, decryptPermission, network, programs, ...props }) => {
 	const { wallet, connect, connecting, connected } = useWallet();

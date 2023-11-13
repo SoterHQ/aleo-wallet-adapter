@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { useWallet } from '@aleo123/aleo-wallet-adapter-react';
+import { useWallet } from '@soterhq/aleo-wallet-adapter-react';
 import type { ButtonProps } from './Button';
 import { Button } from './Button';
 import { useWalletModal } from './useWalletModal';

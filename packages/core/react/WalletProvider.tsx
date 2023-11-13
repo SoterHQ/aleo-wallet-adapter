@@ -11,7 +11,7 @@ import {
     WalletAdapterNetwork,
     AleoTransaction,
     AleoDeployment,
-} from '@aleo123/aleo-wallet-adapter-base';
+} from '@soterhq/aleo-wallet-adapter-base';
 import type { FC, ReactNode } from 'react';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useLocalStorage } from './useLocalStorage';

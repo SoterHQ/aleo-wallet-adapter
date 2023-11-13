@@ -1,7 +1,7 @@
 import type { FC, MouseEventHandler } from 'react';
 import React from 'react';
-import { WalletReadyState } from '@aleo123/aleo-wallet-adapter-base';
-import { Wallet } from '@aleo123/aleo-wallet-adapter-react';
+import { WalletReadyState } from '@soterhq/aleo-wallet-adapter-base';
+import { Wallet } from '@soterhq/aleo-wallet-adapter-react';
 import { Button } from './Button';
 import { WalletIcon } from './WalletIcon';
 

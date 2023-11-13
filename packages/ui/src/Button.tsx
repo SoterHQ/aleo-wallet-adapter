@@ -1,4 +1,4 @@
-import { DecryptPermission, WalletAdapterNetwork } from '@aleo123/aleo-wallet-adapter-base';
+import { DecryptPermission, WalletAdapterNetwork } from '@soterhq/aleo-wallet-adapter-base';
 import type { CSSProperties, FC, MouseEvent, PropsWithChildren, ReactElement } from 'react';
 import React from 'react';
 
