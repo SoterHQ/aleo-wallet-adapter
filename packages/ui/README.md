@@ -27,7 +27,7 @@ npm install --save \
 import React, { FC, useMemo } from "react";
     import { WalletProvider } from "@soterhq/aleo-wallet-adapter-react";
     import { WalletModalProvider } from "@soterhq/aleo-wallet-adapter-reactui";
-    import { LeoWalletAdapter } from "@soterhq/aleo-wallet-adapter-soter";
+    import { SoterWalletAdapter } from "@soterhq/aleo-wallet-adapter-soter";
     import {
       DecryptPermission,
       WalletAdapterNetwork,
