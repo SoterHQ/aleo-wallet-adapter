@@ -1,6 +1,6 @@
 {
   "name": "@soterhq/aleo-wallet-adapter-react",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Core react infrastructure for connecting aleo-compatible wallets to your dApp.",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,7 +11,7 @@
     "doc": "typedoc --plugin typedoc-plugin-markdown --entryPoints index.ts"
   },
   "dependencies": {
-    "@soterhq/aleo-wallet-adapter-base": "^0.0.1"
+    "@soterhq/aleo-wallet-adapter-base": "^0.0.2"
   },
   "devDependencies": {
     "react": "^18.2.0",
@@ -32,5 +32,9 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
-  }
+  },
+  "keywords": [
+    "aleo",
+    "adapter"
+  ]
 }
