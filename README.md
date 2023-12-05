@@ -66,7 +66,7 @@ import React, { FC, useMemo } from "react";
 ```tsx
 import { WalletNotConnectedError } from "@soterhq/aleo-wallet-adapter-base";
 import { useWallet } from "@soterhq/aleo-wallet-adapter-react";
-import { SoterWlletAdapter } from "@soterhq/aleo-wallet-adapter-soter";
+import { SoterWalletAdapter } from "@soterhq/aleo-wallet-adapter-soter";
 import React, { FC, useCallback } from "react";
 
 export const SignMessage: FC = () => {
