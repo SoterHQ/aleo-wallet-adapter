@@ -1,6 +1,6 @@
 {
   "name": "@soterhq/aleo-wallet-adapter-reactui",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "React UI Components for connecting Aleo-compatible wallets to your dApp.",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -12,8 +12,8 @@
     "copy-files": "copyfiles styles.css dist/"
   },
   "dependencies": {
-    "@soterhq/aleo-wallet-adapter-base": "^0.0.2",
-    "@soterhq/aleo-wallet-adapter-react": "^0.0.3"
+    "@soterhq/aleo-wallet-adapter-base": "^0.0.4",
+    "@soterhq/aleo-wallet-adapter-react": "^0.0.5"
   },
   "devDependencies": {
     "copyfiles": "^2.4.1",

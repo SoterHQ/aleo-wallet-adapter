@@ -21,7 +21,6 @@ export interface WalletAdapterProps<Name extends string = string> {
     icon: string;
     readyState: WalletReadyState;
     publicKey: string | null;
-    viewKey: string | null;
     connecting: boolean;
     connected: boolean;
     supportedTransactionVersions: SupportedTransactionVersions;
@@ -70,7 +69,6 @@ export abstract class BaseWalletAdapter<Name extends string = string>
     abstract icon: string;
     abstract readyState: WalletReadyState;
     abstract publicKey: string | null;
-    abstract viewKey: string | null;
     abstract connecting: boolean;
     abstract supportedTransactionVersions: SupportedTransactionVersions;
 

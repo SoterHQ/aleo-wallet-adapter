@@ -119,5 +119,137 @@ export const DecryptMessage: FC = () => {
   );
 };
 ```
+
+### 🗂️Requesting Records
+
+```tsx
+import { WalletNotConnectedError } from "@soterhq/aleo-wallet-adapter-base";
+import { useWallet } from "@soterhq/aleo-wallet-adapter-react";
+import React, { FC, useCallback } from "react";
+
+export const RequestRecords:FC = ()=>{
+  const { publicKey, requestRecords } = useWallet();
+
+  const onClick = async () => {
+    const program = "credits.aleo";
+    if (!publicKey) throw new WalletNotConnectedError();
+    if (requestRecords) {
+      const records = await requestRecords(program);
+      console.log("Records: " + records);
+    }
+  };
+
+  return (
+    <button onClick={onClick} disabled={!publicKey}>
+      Request Records
+    </button>
+  )
+
+}
+```
+
+### 📡Requesting Transactions
+
+```tsx
+import {
+  Transaction,
+  WalletAdapterNetwork,
+  WalletNotConnectedError
+} from "@soterhq/aleo-wallet-adapter-base";
+import { useWallet } from "@soterhq/aleo-wallet-adapter-react";
+import React, { FC, useCallback } from "react";
+
+export const RequestTransaction: FC = () => {
+  const { publicKey, requestTransaction } = useWallet();
+
+  const onClick = async () => {
+    if (!publicKey) throw new WalletNotConnectedError();
+
+    // The record here is an output from the Requesting Records above
+    const record = `'{"id":"0f27d86a-1026-4980-9816-bcdce7569aa4","program_id":"credits.aleo","microcredits":"200000","spent":false,"data":{}}'`
+    // Note that the inputs must be formatted in the same order as the Aleo program function expects, otherwise it will fail
+    const inputs = [JSON.parse(record), "aleo1kf3dgrz9...", `${amount}u64`];
+    const fee = 35_000; // This will fail if fee is not set high enough
+
+    const aleoTransaction = Transaction.createTransaction(
+      publicKey,
+      WalletAdapterNetwork.Testnet,
+      'credits.aleo',
+      'transfer',
+      inputs,
+      fee
+    );
+
+    if (requestTransaction) {
+      // Returns a transaction Id, that can be used to check the status. Note this is not the on-chain transaction id
+      await requestTransaction(aleoTransaction);
+    }
+  };
+
+  return (
+    <button onClick={onClick} disabled={!publicKey}>
+      Request Transaction
+    </button>
+  );
+};
+```
+
+### 🗂️Requesting Record Plaintexts
+
+```tsx
+import {
+  WalletNotConnectedError
+} from "@soterhq/aleo-wallet-adapter-base";
+import { useWallet } from "@soterhq/aleo-wallet-adapter-react";
+import React, { FC, useCallback } from "react";
+
+export const RequestRecordPlaintexts: FC = () => {
+  const { publicKey, requestRecordPlaintexts } = useWallet();
+
+  const onClick = async () => {
+    const program = "credits.aleo";
+    if (!publicKey) throw new WalletNotConnectedError();
+    if (requestRecordPlaintexts) {
+      const records = await requestRecordPlaintexts(program);
+      console.log("Records: " + records);
+    }
+  };
+
+  return (
+    <button onClick={onClick} disabled={!publicKey}>
+      Request Records Plaintexts
+    </button>
+  );
+};
+```
+
+### 🗂️Requesting Transaction History
+
+```tsx
+import {
+  WalletNotConnectedError
+} from "@soterhq/aleo-wallet-adapter-base";
+import { useWallet } from "@soterhq/aleo-wallet-adapter-react";
+import React, { FC, useCallback } from "react";
+
+export const RequestRecords: FC = () => {
+  const { publicKey, requestTransactionHistory } = useWallet();
+
+  const onClick = async () => {
+    const program = "credits.aleo";
+    if (!publicKey) throw new WalletNotConnectedError();
+    if (requestTransactionHistory) {
+      const transactions = await requestTransactionHistory(program);
+      console.log("Transactions: " + transactions);
+    }
+  };
+
+  return (
+    <button onClick={onClick} disabled={!publicKey}>
+      Request Records Transaction History
+    </button>
+  );
+};
+```
  
 

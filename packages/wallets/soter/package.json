@@ -1,6 +1,6 @@
 {
   "name": "@soterhq/aleo-wallet-adapter-soter",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "Aleo wallet adapter for the Soter Wallet.",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "@soterhq/aleo-wallet-adapter-base": "^0.0.2",
+    "@soterhq/aleo-wallet-adapter-base": "^0.0.4",
     "nanoid": "^4.0.0"
   },
   "scripts": {

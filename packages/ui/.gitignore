@@ -1,2 +1,6 @@
 node_modules
+core/base/node_modules
+core/react/node_modules
 
+ui/node_modules
+wallets/soter/node_modules
