@@ -1,6 +1,6 @@
 {
   "name": "@soterhq/aleo-wallet-adapter-base",
-  "version": "0.0.4",
+  "version": "1.0.1",
   "description": "Core infrastructure for connecting aleo-compatible wallets to your dApp.",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",

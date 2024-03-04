@@ -2,19 +2,19 @@
 # yarn lockfile v1
 
 
-"@soterhq/aleo-wallet-adapter-base@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@soterhq/aleo-wallet-adapter-base/-/aleo-wallet-adapter-base-0.0.4.tgz#aae33ed5a51636828b29d5ada5a739a06ad689e0"
-  integrity sha512-p7MFR+0a+CPE5krSe5FLHedwuG7Oyk3IERRiIxdTkAGh3OEzl7oc5f3pDECHugVBQl1wfWAYvMdFxdH2eZGkuA==
+"@soterhq/aleo-wallet-adapter-base@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@soterhq/aleo-wallet-adapter-base/-/aleo-wallet-adapter-base-1.0.0.tgz#32bd9a7c32ec5935a7c8a1c5cd7b51f72cfa5e39"
+  integrity sha512-QLP8b2+umXEgRYUt7s64mkoUwGFAvPhavJmYsgWcl+VOY+mCXTmf3SqWp/ykR7wxnS+RHW+kMceLz+6ruT/ONA==
   dependencies:
     eventemitter3 "^4.0.7"
 
-"@soterhq/aleo-wallet-adapter-react@^0.0.5":
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/@soterhq/aleo-wallet-adapter-react/-/aleo-wallet-adapter-react-0.0.5.tgz#cfc2fedf840dc4f897461544e4e8ad70964cafd2"
-  integrity sha512-hBwJ3Mhw/EkmqlxPeahMTrStMOiVncBwyJDVhcj+fubPSSzsXqe3TGIRRE6+/WgzY8uaH7Vm6BIvGl67pV8PwQ==
+"@soterhq/aleo-wallet-adapter-react@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@soterhq/aleo-wallet-adapter-react/-/aleo-wallet-adapter-react-1.0.0.tgz#e5516efbc6b6eb5ee4fc256298138272f33a115c"
+  integrity sha512-DnGICgW/KHV9oLCKdTNEqJKepS8xVZxq56TRoQPtaVrfD7lhEYR88zFO5Idh4Pv8ZJs3k5zBWXel6hLkbz234g==
   dependencies:
-    "@soterhq/aleo-wallet-adapter-base" "^0.0.4"
+    "@soterhq/aleo-wallet-adapter-base" "^1.0.0"
 
 ansi-regex@^5.0.1:
   version "5.0.1"

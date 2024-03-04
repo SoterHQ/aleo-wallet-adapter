@@ -47,10 +47,10 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@soterhq/aleo-wallet-adapter-base@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@soterhq/aleo-wallet-adapter-base/-/aleo-wallet-adapter-base-0.0.4.tgz#aae33ed5a51636828b29d5ada5a739a06ad689e0"
-  integrity sha512-p7MFR+0a+CPE5krSe5FLHedwuG7Oyk3IERRiIxdTkAGh3OEzl7oc5f3pDECHugVBQl1wfWAYvMdFxdH2eZGkuA==
+"@soterhq/aleo-wallet-adapter-base@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@soterhq/aleo-wallet-adapter-base/-/aleo-wallet-adapter-base-1.0.1.tgz#0ca4f406005bb777f3c894fe16b510be73196963"
+  integrity sha512-pOVgu/d5Hol+0BSFu0+X9HqMYpOi95/3UARpb95yH4WEbxzbvvlXP2Lk/FSPgds0wHgbE6478UvsEpnidL+YjA==
   dependencies:
     eventemitter3 "^4.0.7"
 

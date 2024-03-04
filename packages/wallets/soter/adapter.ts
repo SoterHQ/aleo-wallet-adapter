@@ -28,6 +28,7 @@ export interface SoterWalletEvents {
 
 export interface SoterWallet extends EventEmitter<SoterWalletEvents> {
 	publicKey?: string;
+	isAvailable(): Promise<boolean>;
 	signMessage(message: Uint8Array): Promise<{ signature: Uint8Array }>;
 	decrypt(
 		cipherText: string,
@@ -63,7 +64,6 @@ export interface SoterWalletAdapterConfig {
 export const SoterWalletName = "Soter Wallet" as WalletName<"Soter Wallet">;
 
 export class SoterWalletAdapter extends BaseMessageSignerWalletAdapter {
-    viewKey: "";
 	name = SoterWalletName;
 	url = "https://chromewebstore.google.com/detail/soter-aleo-wallet/gkodhkbmiflnmkipcmlhhgadebbeijhh";
 	icon =
@@ -91,6 +91,11 @@ export class SoterWalletAdapter extends BaseMessageSignerWalletAdapter {
 				if (window?.soter || window?.soterWallet) {
 					this._readyState = WalletReadyState.Installed;
 					this.emit("readyStateChange", this._readyState);
+
+					// Wakeup service worker
+					if (window?.soterWallet && window?.soterWallet.isAvailable) {
+						window?.soterWallet.isAvailable();
+					}
 					return true;
 				}
 				return false;
@@ -128,7 +133,7 @@ export class SoterWalletAdapter extends BaseMessageSignerWalletAdapter {
 
 				case DecryptPermission.UponRequest:
 				case DecryptPermission.AutoDecrypt:
-				case DecryptPermission.ViewKeyAccess: {
+				case DecryptPermission.OnChainHistory: {
 					try {
 						const text = await wallet.decrypt(cipherText, tpk, programId, functionName, index);
 						return text.text;
